@@ -62,16 +62,16 @@ class HuaWei(BaseHuaWei):
         await asyncio.sleep(5)
      
 
-       # await self.page.click('.textBtn')
-       # await asyncio.sleep(20)
+        await self.page.click('.textBtn')
+        await asyncio.sleep(20)
 
-       # await self.page.type('input[class="hwid-input"]','797881',{'delay': 10})
-       # await asyncio.sleep(5)
+        await self.page.type('input[class="hwid-input"]','797881',{'delay': 10})
+        await asyncio.sleep(5)
 
-       # await self.page.click('.dialog-btn.dialog-btn.btn-next.hwid-btn-primary')
-       # await asyncio.sleep(5)
-       # await self.page.click('.dialog-btn.dialog-btn.btn-next.hwid-btn-primary.hwid-btn-primary')
-       # await asyncio.sleep(5)
+        await self.page.click('.dialog-btn.dialog-btn.btn-next.hwid-btn-primary')
+        await asyncio.sleep(5)
+        await self.page.click('.dialog-btn.dialog-btn.btn-next.hwid-btn-primary.hwid-btn-primary')
+        await asyncio.sleep(5)
 
     async def iam_login(self, username, password, parent):
         self.parent_user = os.environ.get('PARENT_USER', parent)

@@ -60,8 +60,7 @@ class HuaWei(BaseHuaWei):
 
         await self.page.click('.normalBtn')
         await asyncio.sleep(5)
-        await self.page.click('.normalBtn')
-        await asyncio.sleep(5)
+     
 
         await self.page.click('.textBtn')
         await asyncio.sleep(20)

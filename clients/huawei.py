@@ -72,7 +72,8 @@ class HuaWei(BaseHuaWei):
         await asyncio.sleep(5)
         await self.page.click('.dialog-btn.dialog-btn.btn-next.hwid-btn-primary.hwid-btn-primary')
         await asyncio.sleep(5)
-
+        await self.logger.info(await self.page.content())
+        
     async def iam_login(self, username, password, parent):
         self.parent_user = os.environ.get('PARENT_USER', parent)
 

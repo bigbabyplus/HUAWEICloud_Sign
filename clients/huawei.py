@@ -63,7 +63,7 @@ class HuaWei(BaseHuaWei):
         
         #await self.page.click('.dialog-btn.dialog-btn.btn-next.hwid-btn-primary')
         #await asyncio.sleep(5)
-        await self.logger.info(await self.page.content())
+        self.logger.info(await self.page.content())
         #await self.page.click('.textBtn')
         #await asyncio.sleep(20)
         #await self.page.type('input[class="hwid-input"]','744229',{'delay': 10})

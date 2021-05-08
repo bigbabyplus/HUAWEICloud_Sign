@@ -66,7 +66,7 @@ class BaseClient:
 
     async def init(self, **kwargs):
         # launcher.DEFAULT_ARGS.remove('--enable-automation')
-        self.browser = await launch(ignorehttpserrrors=True, headless=kwargs.get('headless', False),userDataDir='./userdata',
+        self.browser = await launch(ignorehttpserrrors=True, headless=kwargs.get('headless', False), userDataDir='./userdata',
                                     args=['--disable-infobars', '--disable-web-security', '--no-sandbox',
                                           '--start-maximized', '--disable-features=IsolateOrigins,site-per-process'])
         self.page = await self.browser.newPage()
